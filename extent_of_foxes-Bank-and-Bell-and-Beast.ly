@@ -61,7 +61,7 @@ verse = \lyricmode {
   Bank knows what you're
   owed and shares in your
   joy, is main, frank, not
-  blank, The Bank! It 
+  blank. The Bank! It 
   reads your pro -- so -- dy,
   logs your vic -- to -- ry,
   and knows your mel -- o  --
@@ -72,19 +72,19 @@ verse = \lyricmode {
   are; all that it will
   tell. De -- ny and all --
   ow. The Bell conn --
-  ects the facts,
-  no -- thing lacks,
+  ects the facts
+  (no -- thing lacks),
   can pre -- sent 
   eve -- ry 
   truth.
   
     The
   beast gives us whisk -- ers and
-  fur and fang, makes us
-  strong and fast, makes us
+  fur and fang; makes us
+  strong and fast; makes us
   lithe. The beast is
   smart, is un -- im -- proved,
-  too base, can be more,
+  too base, can be more.
   In -- stinct -- ive thoughts be --
   gone!
 }
@@ -112,8 +112,8 @@ verseTwo = \lyricmode {
   
   -
   - - - hab -- its and
-  hung -- er, fear, makes us
-  flinch and jump, makes us
+  hung -- er, fear; makes us
+  flinch and jump; makes us
   cringe. - -  al --
   ways pre -- pares to strike,
   is not on your side. 
@@ -121,17 +121,17 @@ verseTwo = \lyricmode {
   - 
 }
 
-drum = \drummode {
+drum = \relative c' {
   \global
   % Drums follow here.
-  gui8[ \grace { gui16 gui16 } gui8]
-  \repeat percent 7 { \grace { gui16 gui16 } gui4 gui4:32~ gui16 gui8 gui16 gui8[ \grace { gui16 gui16 } gui8]  }
-  \grace { gui16 gui16 } gui4 gui4:32~ gui16 gui8 gui16 gui4:32
+  c8[ \grace { c16 c16 } c8]
+  \repeat percent 7 { \grace { c16 c16 } c4 c4:32~ c16 c8 c16 c8[ \grace { c16 c16 } c8]  }
+  \grace { c16 c16 } c4 c4:32~ c16 c8 c16 c4:32
   
-  \repeat percent 7 { gui8[ \grace { gui16 gui16 } gui8] gui16 gui gui gui gui2:32 }
-  gui8[ \grace { gui16 gui16 } gui8] gui16 gui gui gui gui[ gui \grace { gui16 gui16 } gui8] gui4:32
-  \repeat percent 7 { gui8[ \grace { gui16 gui16 } gui8] \grace { gui16 gui16 } gui8 gui16 gui gui[ gui \grace { gui16 gui16 } gui8] gui4:32 }
-  gui16 gui gui gui gui8 gui gui4
+  \repeat percent 7 { c8[ \grace { c16 c16 } c8] c16 c c c c2:32 }
+  c8[ \grace { c16 c16 } c8] c16 c c c c[ c \grace { c16 c16 } c8] c4:32
+  \repeat percent 7 { c8[ \grace { c16 c16 } c8] \grace { c16 c16 } c8 c16 c c[ c \grace { c16 c16 } c8] c4:32 }
+  c16 c c c c8[ \grace { c16 c16 } c8] \grace { c16 c16 } c4 
 }
 
 altoVoicePart = \new Staff \with {
@@ -143,8 +143,7 @@ altoVoicePart = \new Staff \with {
 drumsPart = \new DrumStaff \with {
   \consists "Instrument_name_engraver"
   instrumentName = "Claws"
-  drumStyleTable = #percussion-style
-  midiInstrument = "snaredrum"
+  midiInstrument = "xylophone"
   \override StaffSymbol.line-count = #1
 } \drum
 
